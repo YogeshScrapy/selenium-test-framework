@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 293.633 sec <<< FAILURE! - in TestSuite
+removeheadphonefromcart(TestExecutionSuite.BasicFunctionalExecutionSuite)  Time elapsed: 243.973 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="search"]/div[1]/div[2]/div/span[3]/div[1]/div[2]/div/div/div/div[2]/div[1]/div/div/span/a/div/img' (tried for 100 second(s) with 500 milliseconds interval)
+	at TestExecutionSuite.BasicFunctionalExecutionSuite.removeheadphonefromcart(BasicFunctionalExecutionSuite.java:72)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //*[@id="search"]/div[1]/div[2]/div/span[3]/div[1]/div[2]/div/div/div/div[2]/div[1]/div/div/span/a/div/img
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'yogeshs-MacBook-Pro.local', ip: 'fe80:0:0:0:18cd:d112:616f:cd81%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190607204818, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 40395, moz:profile: /var/folders/nt/gfhgmqy52p5..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0885bec3-240f-ca4e-9396-05d124f463ae
+*** Element info: {Using=xpath, value=//*[@id="search"]/div[1]/div[2]/div/span[3]/div[1]/div[2]/div/div/div/div[2]/div[1]/div/div/span/a/div/img}
+	at TestExecutionSuite.BasicFunctionalExecutionSuite.removeheadphonefromcart(BasicFunctionalExecutionSuite.java:72)
+
+aftersuite(TestExecutionSuite.BasicFunctionalExecutionSuite)  Time elapsed: 3.683 sec  <<< FAILURE!
+org.openqa.selenium.InvalidArgumentException: 
+Malformed URL: ./Reports/Report.html is not a valid URL.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'yogeshs-MacBook-Pro.local', ip: 'fe80:0:0:0:18cd:d112:616f:cd81%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190607204818, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 40395, moz:profile: /var/folders/nt/gfhgmqy52p5..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0885bec3-240f-ca4e-9396-05d124f463ae
+	at TestExecutionSuite.BasicFunctionalExecutionSuite.aftersuite(BasicFunctionalExecutionSuite.java:101)
+

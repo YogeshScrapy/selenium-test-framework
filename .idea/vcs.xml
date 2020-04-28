@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/selenium-framework/ui-automation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ui-automation" vcs="Git" />
   </component>
 </project>

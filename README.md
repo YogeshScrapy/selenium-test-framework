@@ -72,7 +72,12 @@ The Project is preconfigured to run the tests in parallel. The number of test th
 To work on the project you will have to clone the project from Gitlab.
 ```git clone https://gitlab.rktn.de/qa/import-service-automation.git```
 
-To build the project you can look for the file which is at ```(/rakuten/import-service-automation/pom.xml)``` and you make sure that ```(.m2/Setting.xml) is also updated.
+To build the project you can look for the file which is at ```(/rakuten/import-service-automation/pom.xml)``` and you make sure that  ```(.m2/Setting.xml)```  is also updated.
+To check setting.xml file you can open your terminal and check the same with command.```mvn help:effective-settings```
+you will aslo have to download the jar for Lombok manually. 
+
+In pom.xml and settings.xml you will have to update the Url host from fra to az ```https://az-nexus-repository.rakuten-infra.de```
+
 Once above set up is done biuld the the project using the command 
 ```mvn clean install```
 
@@ -84,3 +89,13 @@ Allure provides a good representation of test execution output and is designed t
 
 ## 🚀 Template Testing
 TestNg templates
+
+## Running Examples
+Download the zip or clone the Git repository.
+Unzip the zip file (if you downloaded one).
+Open Command Prompt and Change directory (cd) to folder containing pom.xml
+Open Eclipse/Intellij 
+Build dependencies using POM.xml.
+File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
+Right Click on the file and Run as Java Application
+You can also run the project with testNg.xml based on class prefrence.

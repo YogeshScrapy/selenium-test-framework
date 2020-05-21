@@ -69,7 +69,7 @@ The Project is preconfigured to run the tests in parallel. The number of test th
 To work on the project you will have to clone the project from Gitlab.
 ```git clone https://gitlab.rktn.de/qa/import-service-automation.git```
 
-To build the project you can look for the file which is at (/rakuten/import-service-automation/pom.xml) and you make sure that (.m2/Setting.xml) is also updated  
+To build the project you can look for the file which is at ```(/rakuten/import-service-automation/pom.xml)``` and you make sure that ```(.m2/Setting.xml) is also updated.
 Once above set up is done biuld the the project using the command 
 ```mvn clean install```
 

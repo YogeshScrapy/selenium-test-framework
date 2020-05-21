@@ -28,8 +28,11 @@ Benefits
 Thanks to the awesome webdrivermanager it supports the following browsers and automatically downloads OS specific binaries for:
 
 Chrome Headless (default) 
+
 Chrome 
+
 Firefox Headless 
+
 Firefox 
 
 ## 🕹️ Full control over certain test methods and classes by annotations

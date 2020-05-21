@@ -1,24 +1,79 @@
-# Test Automation with Java
-Web test automation example project using IntelliJ IDEA Community, Java, Maven, TestNG, Selenium 3, Appium and Page Object Model (POM)
+Import Service Project
+This import service project is written in JAVA and will serve the purpose of implementing UI test for import service with Selenium and Maven. Everything is set up and test can be added straight away 
 
-## Test Subject
-I've picked amazon.in as a test subject for no particular reason.
-It's is a large site and does have variety of features that we can play around with.
+ℹ️ Selenium is a website automation framework  to write reliable and resilient UI functional tests. This framework TestNg ready. Written and maintained by people who are automating browser-based tests on a routine basis.
+Prerequisites
 
-## Libraries and Frameworks
-Version for some of these can be found in the [POM](https://github.com/opantsjoha/test-automation-java/blob/master/pom.xml) file.
-* Selenium - Web automation
-* Appium - Mobile automation
-* Maven - Build and package management
-* TestNG - Test execution and Reporting
+>=JDK8 installed
+Features:
+browsers preconfigured- Firefox, Chrome
+downloading OS specific binaries automatically
+full control by annotations
+page object pattern ready
+pretty and highly readable console output
+parallel test execution with testNG File.
+centralized project config
+assertions, waits and test extensions
+meaningful test result report
+template testing
+Benefits
+💻 Implemented Browsers
+Thanks to the awesome webdrivermanager it supports the following browsers and automatically downloads OS specific binaries for:
 
-## Tools
-Using [IntelliJ IDEA Community](https://www.jetbrains.com/idea/) version.
-I've previously used Eclipse and found it to be a little bit slower and not as intuitive, you're free to try both and decide for yourself. Also there are a lot of comparison articles out there already. 
+Chrome Headless (default) 
+Chrome 
+Firefox Headless 
+Firefox 
 
-## Programming Language
-I'm using [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) version jdk1.8.0_111 and it works very well.
-There are a couple of good reasons to use Java:
-* It's been around for a while so there are a lot of solutions for most problems and if not then somebody from the community will be able to suggest an answer quickly.
-* It's OpenSource - there are large, well supported communities sharing free libraries.
-* Because of the above two points it's possible to automate (testing) checking for iOS (Web and Native), Android (Web and Native) and Web platforms.
+🕹️ Full control over certain test methods and classes by annotations
+The project includes custom annotations to comfortably set some test conditions and/or assumptions like skip/require certain tests on execution with specific browsers and/or override driver options like browser dimension, headers, cookies, etc. This will increase the possibility to write easily readable and flexible tests.
+
+@Browser
+Overwrite used (default) browser by annotating test classes or test methods with:
+
+@Browser(use = FIREFOX)
+This will always execute the annotated tests with the selected browser, no matter what has been set as default browser. See the full list of possible parameter values.
+
+Furthermore you can conveniently set the Browser windows dimension that is used for the test by setting the dimension field:
+
+@Browser(dimension = XLARGE)
+This will lead to a window resize before the actual test starts and is especially helpful if the site under test relies on a responsive web design. See the full list of possible dimensions. The specific values of the breakpoints can be configured in the config.properties file.
+
+@EnabledOnOs
+You can control that a test will ONLY be executed on specific operating systems. (works on class and method level)
+
+@EnabledOnOs(LINUX, WINDOWS)
+If a test is annotated with @EnabledOnOs and the current OS the tests gets executed on is not matching, they will be skipped.
+
+
+📜 Page Object Pattern ready
+The Page-Object-Pattern can be used straight away to specify elements etc. It will have out-of-the-box support for typical helper methods like isAt(), etc... To instantiate a page object in a test class just the the following:
+
+@Page
+private StartPage startPage;
+
+📍 Highlight Clicked Elements
+When clicking an element it will be highlighted with a red border. This is helpful to easily understand what a certain test is doing while watching a test run. This functionality is working because the project is implementing an event firing webdriver. Therefore you have the possibility to hook into a bunch of driver events and do custom stuff if you want to, e.g.:
+
+beforeClickOn / afterClickOn
+beforeNavigateTo / afterNavigateTo
+beforeFindBy / afterFindBy
+beforeScript / afterScript
+beforeGetText / afterGetText
+
+
+👩‍👩‍👦‍👦 Parallel Test Execution
+The Project is preconfigured to run the tests in parallel. The number of test that will be executed at the same time is configurable (defaults to 4) or can be deactivated if required.
+
+🎯 Centralized Project Config
+All global configurations are living in a properties file (resources/config.properties) and can be adjusted. It gives you the possibility to edit the global project behaviour in one place without messing around with project/setup specific code. Furthermore all properties can be overridden via system properties.
+
+
+⏱️ Waits
+Testing web applications that are asynchroniously loading / rerendering parts of the page can become hard to test with Selenium. Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner and is therefore added to this project.
+
+📊 Allure Test Result Report
+Allure provides a good representation of test execution output and is designed to create reports that are clear to everyone by creating graphs regarding test execution time, overall test result overviews, test result history, etc.
+
+🚀 Template Testing
+TestNg templates
